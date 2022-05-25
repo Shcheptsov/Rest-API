@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "bcd8ad4b-67a6-44b8-a1de-fa36454e549a",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21091984"
+	},
+	"item": [
+		{
+			"name": "1. Получение списка записей из БД",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/books/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Поиск книг по автору",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/books/author/Shelly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"author",
+						"Shelly"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Добавление записи (новой книги)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "test",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "name",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"The Pragmatic Programmer: From Journeyman to Master\",\r\n    \"description\": \"The cool thing about this book is that it’s great for keeping the programming process fresh...\",\r\n    \"publication_date\": \"Eighteenth printing, August 2006\",\r\n    \"isbn\": \"020161622\",\r\n    \"date\": \"2018-08-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/books/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Обновление записи о книге",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"title\": \"The Pragmatic Programmer: From Journeyman to Master\",\r\n    \"description\": \"The cool thing about this book is that it’s great for keeping the programming process fresh...\",\r\n    \"publication_date\": \"Eighteenth printing, August 2006\",\r\n    \"isbn\": \"020161622\",\r\n    \"date\": \"2018-08-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/books/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Удаление записи книги из БД",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/books/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"books",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
