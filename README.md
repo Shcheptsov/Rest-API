@@ -95,13 +95,4 @@ yourdomain.com/authors/your-page-number
 yourdomain.com/books/title/your-book-title/your-page-number
 yourdomain.com/books/author/your-book-author/your-page-number
 ```
-```
-(Для решения взял за основу gitub https://github.com/afgprogrammer/php-books-library)
-```
-обнавление, создание и удаление книги:
-```
-controllers createBook, updateBook, deleteBook
-Для тестиования коллекция POSTMAN (test.postman_collection.json)
-Подразумевается, что  обнавление, создание удаление будет осуществляться через AJAX
-```
 
